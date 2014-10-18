@@ -3,6 +3,7 @@
 	include "./core/Config/includes.php";
 	include "./partials/header.php";
 
+	// On récupère tous les sujets de la catégorie demandée
 	$subjects = $bdd->where(null,'category_id','=',$_GET['id'],'subjects');
 
 ?>

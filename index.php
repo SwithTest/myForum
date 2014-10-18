@@ -3,7 +3,10 @@
 	include "./core/Config/includes.php";
 	include "./partials/header.php";
 
+	// On récupère le title, description, id et le nombre de sujet de toutes les catégories
 	$categories = $bdd->find(['title','description','id','count'],"categories");
+
+	// On récupère l'id, le title, le content, et l'id de la catégorie des sujets
 	$subjects = $bdd->find(['id','title','content','category_id'],'subjects');
 
 ?>

@@ -12,7 +12,7 @@
 			$d['content'] = htmlspecialchars($_POST['content']);
 			$d['category_id'] = $_GET['id'];
 			$sujet = new Subject($d['title'],$d['content']);
-			if($sujet->validate()){
+			if($sujet->validate()){ //voir addResponse.php c'est la même chose ^^
 				$bdd->create('subject',$d);
 				$bdd->up('categories',$d['category_id']);
 

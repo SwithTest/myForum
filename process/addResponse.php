@@ -1,9 +1,13 @@
 <?php 
-	
+	/*
+		Permet d'ajouter une réponse 
+	*/
 	include('../core/Config/includes.php');
 	include('../partials/header.php');
 
+	// On charge la class Reponse
 	include('../core/Classes/response.class.php');
+
 
 	$sujet = $bdd->where(null,'id','=',$_GET['id'],'subjects');
 
@@ -13,11 +17,11 @@
 			$d['content'] = htmlspecialchars($_POST['content']);
 			$d['category_id'] = $sujet->category_id;
 			$d['id'] = $_GET['id'];
-			$reponse = new Response($d,$bdd);
-			if($reponse->validate()){
-				$reponse->create();
-				$bdd->create('reponses',$d);
-				$bdd->up('subjects',$d['id']);
+			$reponse = new Response($d,$bdd); // On créer un nouvel objet de type réponse
+			if($reponse->validate()){ // Si ce nouvel objet est valide (content > 20 caractères)
+				$reponse->create(); //truc peter pour le moment ^^
+				$bdd->create('reponses',$d); //  on créer un nouvel enregistrement en base de donnée
+				$bdd->up('subjects',$d['id']); //truc peter pour le moment ^^
 				header("Location:show.php?id=".$_GET['id']);
 			}else{
 				$erreur = "Veuillez verifier vos entrées";

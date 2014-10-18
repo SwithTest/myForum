@@ -1,5 +1,7 @@
 <?php
 
+// VOIR reponse.class.php même fonctionnement ^^
+
 class Subject {
 	
 	private $title;

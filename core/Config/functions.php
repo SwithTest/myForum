@@ -1,9 +1,17 @@
 <?php 
 
+// FONCTIONS UTILES PARTOUT 
+
+	/*
+	* Permet de réduire le nombre de caractères d'une chaine
+	*/
 	function cut($string,$limit) {
 		return substr($string, 0, $limit);
 	}
 
+	/*
+	* Génère un lien plus pratique que de faire des concaténation à chaque fois...
+	*/
 	function lien($lien,$name,array $params = null,array $options = null) {
 		$return = "<a href='$lien.php";
 

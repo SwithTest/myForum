@@ -3,7 +3,10 @@
 	include('./core/Config/includes.php');
 	include('./partials/header.php');
 
+	// on récupère les réponses au sujet courant
 	$reponses = $bdd->where(null,'subject_id','=',$_GET['id'],'reponses');
+
+	//on récupère le sujet demandé
 	$sujet = $bdd->where(null,'id','=',$_GET['id'],'subjects');
 
 ?>
