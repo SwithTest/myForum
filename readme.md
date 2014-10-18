@@ -3,6 +3,7 @@
 Un forum PHP sans prétention fait à la main parti de rien.
 
 ##Conventions
+__! En construction__
 Dès que c’est possible tout sera au format CamelCase.
 
 * Nom de variables : simple, précis et consi ex `$id` et non `identifiantDeMonObjet`
@@ -12,5 +13,6 @@ Dès que c’est possible tout sera au format CamelCase.
     * Si c’est un processus : nomDuProcess, 
      
 ##Objectifs
+__! En construction__
 * Resoudre le probleme de Database non accessible dans les différentes classes.
 * Système de connexion
