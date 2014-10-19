@@ -11,8 +11,18 @@ Dès que c’est possible tout sera au format CamelCase.
 * Nom de fonctions : idem.
 * Nom des fichiers : 
     * Si c’est une classe nomDeLaClasse.class.php
-    * Si c’est un processus : nomDuProcess, 
-     
+    * Si c’est un processus : nomDuProcess
+* Commentaires :
+    * Pour les commentaires simples : `//Commentaire en une ligne`
+    * Pour les commentaires multi-lignes : 
+            
+            /*
+            * Description de la fonction ou du block
+            * @params $paramsName : description du parametre
+            * @var $varName : description de la variable
+            */
+    
+
 ##Objectifs
 __! En construction__
 
